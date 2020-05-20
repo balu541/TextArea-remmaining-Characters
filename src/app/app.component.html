@@ -1,0 +1,25 @@
+<app-sample></app-sample>
+<!-- <div *ngFor="let item of Customers">
+    <table>
+       <tr>
+        <td>{{item.cust_id}}</td>
+        <td>{{item.cust_name}}</td>
+        <td>{{item.cust_email}}</td>
+        <td>{{item.cust_address}}</td>
+        <td>{{item.cust_mobile}}</td>
+      </tr> 
+    </table>
+  </div>
+  {{Customers | json}} -->
+  <form [formGroup]="profileForm">
+  <textarea 
+   id="descriptionEducation" 
+   name="description" 
+   rows="5" 
+   formControlName="textControl" (keyup)="onKey($event)"></textarea>
+
+<div class="form-row__description">
+    Remainning {{ descriptionLength  }} characters
+</div>
+  </form>
+<router-outlet></router-outlet>
